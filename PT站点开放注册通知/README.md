@@ -7,5 +7,5 @@
 - 将 `{domain}` 替换成iyuu部署的地址，如：`http://192.168.100.10:18787`
 - 将控制台输出的 `object` 复制到 `pt.json` 文件中
 ``` javascript
-layui.jquery.get('{domain}/admin/site/select?page=1&limit=10000').done(function({data}){let list = [];layui.jquery.each(data, function(index, item){ list.push({name: item.nickname + (item.nickname.toUpperCase() == item.site.toUpperCase() ? '' : '（'+ item.site +'）'), href: 'https://' + item.base_url + '/signup.php' });  }); console.log(list);});
+layui.jquery.get('{domain}/admin/site/select?page=1&limit=10000&disabled=1').done(function({data}){let list = [];layui.jquery.each(data, function(index, item){ list.push({name: item.nickname + (item.nickname.toUpperCase() == item.site.toUpperCase() ? '' : '（'+ item.site +'）'), href: 'https://' + item.base_url + '/signup.php' });  }); console.log(list);});
 ```
